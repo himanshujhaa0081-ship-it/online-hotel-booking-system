@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="main-header">
+  <div class="logo">BOOKIFY</div>
+  <nav>
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+  </nav>
+</header>
+
+
+
+<video class="bg-video" autoplay muted loop>
+<source src="vd33.mp4" type="video/mp4">
+</video>
+<div class="video-overplay"></div>
+<div class="search-section">
+  <div class="search-box">
+ 
+
+  <h2>Search Hotels</h2>
+<input type="text" id="city" placeholder="Enter city name">
+<button onclick="searchCity()">Search</button>
+
+  </div>
+  
+
+<script>
+function searchCity() {
+  let city = document.getElementById("city").value
+              .toLowerCase()
+              .trim();
+
+  if (city === "") {
+    alert("Please enter city name");
+    return;
+  }
+
+  if (city === "delhi") {
+    window.location.href = "delhi.html";
+  } 
+  else if (city === "mumbai") {
+    window.location.href = "mumbai.html";
+  } 
+  else if (city === "ahmedabad") {
+    window.location.href = "ahmedabad.html";
+  } 
+  else {
+    alert("No hotels found for this city");
+  }
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+<header class="main-header">
+  <div class="logo">BOOKIFY</div>
+  </header>
+  
+ 
+ <form action="LoginServlet" method="post">
+ 
+<video class="bg-video"autoplay muted loop playsinline>
+<source src="vd34.mp4" type="video/mp4">
+</video>
+<div class="search-section">
+<div class="form-box">
+  <h2>Login</h2>
+  <input type="email"  id="email" placeholder="Email">
+  <input type="password"  id="password" placeholder="Password">
+  <button onclick="loginUser()">Login</button>
+  <p>Don't have an account? <a href="register.html">Register</a></p>
+
+<button onclick="logout()">Logout</button>
+
+
+</div>
+<script>
+function loginUser() {
+  let email = document.getElementById("loginEmail").value;
+  let password = document.getElementById("loginPassword").value;
+
+  let storedEmail = localStorage.getItem("userEmail");
+  let storedPassword = localStorage.getItem("userPassword");
+
+  if (email === storedEmail && password === storedPassword) {
+    alert("Login successful!");
+    window.location.href = " HT index.html";
+  } else {
+    alert("Invalid email or password");
+  }
+}
+function logout() {
+  localStorage.clear();
+  alert("Logged out");
+  window.location.href = "login.html";
+}
+</script>
+
+
+</script>
+
+
+
+</body>
+</html>
+

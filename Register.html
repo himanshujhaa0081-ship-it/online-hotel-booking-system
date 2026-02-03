@@ -1,0 +1,54 @@
+
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="register-page">
+<header class="main-header">
+<div class="logo">BOOKIFY</div>
+
+</header>
+<video class="bg-video" autoplay muted loop playsinline>
+<source src="vd32.mp4" type="video/mp4">
+</video>
+<div class="video-overplay"></div>
+<div class="search-section">
+<div class="form-box">
+  <h2>Register</h2>
+  <input type="text" id="name" placeholder="Full Name">
+  <input type="email"  id="email" placeholder="Email">
+  <input type="password"   id="password" placeholder="Password">
+  <button onclick="registerUser()"> Register</button>
+  
+  
+   <p>Already have an account?
+    <a href="login.html">Login</a>
+  
+</div>
+<script>
+function registerUser() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if (name === "" || email === "" || password === "") {
+    alert("All fields are required");
+    return;
+  }
+
+ 
+
+  localStorage.setItem("userName", name);
+  localStorage.setItem("userEmail", email);
+  localStorage.setItem("userPassword", password);
+
+  alert("Registration successful!");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
+
